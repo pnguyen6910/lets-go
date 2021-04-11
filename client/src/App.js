@@ -6,13 +6,19 @@ import L from 'leaflet'
 import { TileLayer, Marker, Popup, MapContainer } from 'react-leaflet'
 
 
-
+// var myIcon = L.icon({
+//   iconUrl: '',
+//   iconSize: [25, 41],
+//   iconAnchor: [12.5, 41],
+//   popupAnchor: [0, -41]
+// })
 class App extends Component {
   state = {
     lat: 41.878113,
     lng: -87.629799,
     zoom: 13
   }
+
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
@@ -34,4 +40,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+
