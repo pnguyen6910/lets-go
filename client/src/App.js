@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Search from './components/Search'
-import About from './components/About'
+import About from './pages/About'
+import Home from './pages/Home'
 import './App.css';
-import L from 'leaflet'
-import { TileLayer, Marker, Popup, MapContainer } from 'react-leaflet'
+
 
 
 // var myIcon = L.icon({
@@ -14,42 +13,20 @@ import { TileLayer, Marker, Popup, MapContainer } from 'react-leaflet'
 //   iconAnchor: [12.5, 41],
 //   popupAnchor: [0, -41]
 // })
-class App extends Component {
-  state = {
-    lat: 41.878113,
-    lng: -87.629799,
-    zoom: 13
-  }
+function App() {
 
-  render() {
-    const position = [this.state.lat, this.state.lng];
-    return (
-      <div className="container">
-        <Router>
-          <Navbar />
-          <Route exact path='/about'>
-            <About />
-          </Route>
-          <div className="row">
-            <Search />
-            <div className="col-9">
-              <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={false}>
-                <TileLayer
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={position}>
-                  <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                  </Popup>
-                </Marker>
-              </MapContainer>
-            </div>
-          </div>
-        </Router>
-      </div>
-    );
-  }
+  return (
+    <div className="container">
+      <Router>
+        <Navbar />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/about'>
+          <About />
+        </Route>
+      </Router>
+    </div>
+  );
 }
+
 
 export default App
