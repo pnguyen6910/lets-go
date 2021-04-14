@@ -3,8 +3,8 @@ import Navbar from './components/Navbar'
 import Search from './components/Search'
 import './App.css';
 import L from 'leaflet'
-import { TileLayer, Marker, Popup, MapContainer } from 'react-leaflet'
-
+import { TileLayer, Marker, Popup, MapContainer, Polygon, GeoJSON } from 'react-leaflet'
+import bikeRoutes from './utils/Bikeroutes.json'
 
 // var myIcon = L.icon({
 //   iconUrl: '',
@@ -19,17 +19,29 @@ class App extends Component {
     zoom: 13
   }
 
+  //   L.Icon.Default.mergeOptions({
+  //     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  //       iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  //         shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+  //   })
+  // L.shapefile = L.GeoJSON.extend({
+  //   options: {
+  //     importUrl: ''
+  //   }
+  // })
+
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
       <div className="container">
         <Navbar />
         <Search />
-        <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={false}>
+        <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <GeoJSON data={bikeRoutes} />
           <Marker position={position}>
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.
