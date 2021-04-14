@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Search from './components/Search'
+import About from './components/About'
 import './App.css';
 import L from 'leaflet'
 import { TileLayer, Marker, Popup, MapContainer } from 'react-leaflet'
@@ -23,21 +25,31 @@ class App extends Component {
     const position = [this.state.lat, this.state.lng];
     return (
       <div className="container">
-        <Navbar />
-        <Search />
-        <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={false}>
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-          </Marker>
-        </MapContainer>,
+        <Router>
+          <Navbar />
+          <Route exact path='/about'>
+            <About />
+          </Route>
+          <div className="row">
+            <Search />
+            <div className="col-9">
+              <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={false}>
+                <TileLayer
+                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={position}>
+                  <Popup>
+                    A pretty CSS3 popup. <br /> Easily customizable.
+                  </Popup>
+                </Marker>
+              </MapContainer>
+            </div>
+          </div>
+        </Router>
       </div>
     );
   }
 }
 
+export default App

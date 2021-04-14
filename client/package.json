@@ -5,14 +5,9 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.21.1",
-<<<<<<< HEAD
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-=======
     "leaflet": "^1.7.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
->>>>>>> c6e88071442a4e580fcebd7c462c54620b93104c
     "react-leaflet": "^3.1.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^4.0.3"
