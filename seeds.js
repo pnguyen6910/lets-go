@@ -89,4 +89,10 @@ const seeds = [
         longitude: -87.78428644734801,
         description: "A beautiful destination for spending a day."
     },
+    {
+        name: "The 606",
+        latitude: 41.913908941901596,
+        longitude: -87.72013180311839,
+        description: "An awesome bike path."
+    },
 ]
