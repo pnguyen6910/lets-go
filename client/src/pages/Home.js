@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Search from '../components/Search'
-
 import L from 'leaflet'
-import { TileLayer, Marker, Popup, MapContainer } from 'react-leaflet'
-
+import { TileLayer, Marker, Popup, MapContainer, GeoJSON } from 'react-leaflet'
+import bikeRoutes from '../utils/Bikeroutes.json'
 class Home extends Component {
     state = {
         lat: 41.878113,
@@ -25,6 +24,7 @@ class Home extends Component {
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
+                            <GeoJSON data={bikeRoutes} />
                             <Marker position={position}>
                                 <Popup>
                                     A pretty CSS3 popup. <br /> Easily customizable.
