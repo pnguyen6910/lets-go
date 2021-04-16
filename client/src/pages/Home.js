@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Search from '../components/Search'
+// import Search from '../components/Search'
 import L from 'leaflet'
 import { TileLayer, Marker, Popup, MapContainer, GeoJSON } from 'react-leaflet'
 import bikeRoutes from '../utils/Bikeroutes.json'
@@ -9,14 +9,13 @@ class Home extends Component {
         lng: -87.629799,
         zoom: 13
     }
-
     render() {
         const position = [this.state.lat, this.state.lng];
         return (
             <div className="container">
                 <div className='row'>
                     <div className="col-3">
-                        <Search />
+                        {/* <Search /> */}
                     </div>
                     <div className="col-9">
                         <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={true}>
@@ -37,5 +36,4 @@ class Home extends Component {
         )
     }
 }
-
 export default Home;
