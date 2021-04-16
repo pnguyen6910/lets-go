@@ -20,7 +20,7 @@ class Home extends Component {
                         <Search />
                     </div>
                     <div className="col-9">
-                        <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={false}>
+                        <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={true}>
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
