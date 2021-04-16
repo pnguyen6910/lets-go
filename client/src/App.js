@@ -4,6 +4,11 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
 import './App.css';
+import L from 'leaflet'
+import { TileLayer, Marker, Popup, MapContainer, Polygon, GeoJSON } from 'react-leaflet'
+import bikeRoutes from './utils/Bikeroutes.json'
+
+
 
 
 
@@ -13,21 +18,46 @@ import './App.css';
 //   iconAnchor: [12.5, 41],
 //   popupAnchor: [0, -41]
 // })
-function App() {
 
-  return (
+class App extends Component {
+  state = {
+    lat: 41.878113,
+    lng: -87.629799,
+    zoom: 13
+  }
 
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/about'>
-          <About />
-        </Route>
-      </Switch>
-    </Router>
+  //   L.Icon.Default.mergeOptions({
+  //     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  //       iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  //         shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+  //   })
+  // L.shapefile = L.GeoJSON.extend({
+  //   options: {
+  //     importUrl: ''
+  //   }
+  // })
 
-  );
+  render() {
+    const position = [this.state.lat, this.state.lng];
+    return (
+      <div className="container">
+        <Navbar />
+        <Search />
+        <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={true}>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <GeoJSON data={bikeRoutes} />
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+      </Popup>
+          </Marker>
+        </MapContainer>,
+      </div>
+    );
+  }
 }
 
 
