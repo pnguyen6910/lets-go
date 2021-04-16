@@ -1,10 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Search from './components/Search'
+import Home from './pages/Home'
+import About from './pages/About'
 import './App.css';
 import L from 'leaflet'
 import { TileLayer, Marker, Popup, MapContainer, Polygon, GeoJSON } from 'react-leaflet'
 import bikeRoutes from './utils/Bikeroutes.json'
+
+
+
+
 
 // var myIcon = L.icon({
 //   iconUrl: '',
@@ -12,6 +18,7 @@ import bikeRoutes from './utils/Bikeroutes.json'
 //   iconAnchor: [12.5, 41],
 //   popupAnchor: [0, -41]
 // })
+
 class App extends Component {
   state = {
     lat: 41.878113,
@@ -53,4 +60,5 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default App
