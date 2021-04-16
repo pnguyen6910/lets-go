@@ -1,6 +1,7 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, { Component } from 'react'
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Search from './components/Search'
 import Home from './pages/Home'
 import About from './pages/About'
 import './App.css';
