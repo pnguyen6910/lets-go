@@ -3,6 +3,8 @@ import Search from '../components/Search'
 import L from 'leaflet'
 import { TileLayer, Marker, Popup, MapContainer, GeoJSON } from 'react-leaflet'
 import bikeRoutes from '../utils/Bikeroutes.json'
+import Icon from '../components/Icon'
+
 class Home extends Component {
     state = {
         lat: 41.878113,
@@ -19,7 +21,7 @@ class Home extends Component {
                         <Search />
                     </div>
                     <div className="col-9">
-                        <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={false}>
+                        <MapContainer className="map" center={position} zoom={13} scrollWheelZoom={true}>
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
