@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Search from '../components/Search'
+import './Home.css'
 import L from 'leaflet'
 import { TileLayer, Marker, Popup, MapContainer, GeoJSON } from 'react-leaflet'
 import bikeRoutes from '../utils/Bikeroutes.json'
