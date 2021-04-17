@@ -1,5 +1,5 @@
 import React from 'react'
-import Search from "react-leaflet-search"
+
 
 function Search() {
     return (

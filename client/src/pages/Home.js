@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import Search from '../components/Search'
 import './Home.css'
 import L from 'leaflet'
