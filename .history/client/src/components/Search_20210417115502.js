@@ -1,8 +1,7 @@
 import React from 'react'
-import Search from "react-leaflet-search/lib/Search-v1";
+import Search from "react-leaflet-search"
 
-
-function SearchBar() {
+function Search() {
     return (
 
         <form className="row g-3">
@@ -19,4 +18,4 @@ function SearchBar() {
     )
 }
 
-export default SearchBar;
+export default Search;
