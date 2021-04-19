@@ -5,6 +5,7 @@ import L from 'leaflet'
 import { TileLayer, Marker, Popup, Map, GeoJSON } from 'react-leaflet'
 import bikeRoutes from '../utils/Bikeroutes.json'
 import Icon from '../components/Icon'
+import "leaflet/dist/leaflet.css"
 
 class Home extends Component {
     state = {
@@ -19,11 +20,11 @@ class Home extends Component {
             <div className="container">
                 <div className='row'>
                     <div className="col-3">
-                    <Search />
+                        <Search />
                     </div>
                     <div className="col-9">
                         <Map className="map" center={position} zoom={13} scrollWheelZoom={true}>
-                        
+
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
