@@ -134,12 +134,13 @@ const pointsSeed = [
         description: "Chicago Botanic Garden <br /> A beautiful destination for spending a day."
     },
     {
+        name: "The 606",
         position: {
             lat: 41.913908941901596,
             lng: -87.72013180311839,
             zoom: 13
         },
-        description: "The 606 <br /> An awesome bike path."
+        description: "An awesome bike path."
     },
 ];
 

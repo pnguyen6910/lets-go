@@ -102,45 +102,50 @@ const pointsSeed = [
         description: "Museum of Science and Industry <br /> Visit Sue when you're there, or see the U505.  The Omnimax is pretty cool too."
     },
     {
+        name: "",
         position: {
             latitude: 41.91813486644659,
             longitude: -87.62737811671859,
             zoom: 13
-        },
+        }
         description: "North Avenue Beach <br /> Another nice Chicago beach."
     },
     {
+        name: "Legion Park",
         position: {
             latitude: 41.98420770046654,
             longitude: -87.70643776164125,
             zoom: 13
-        },
-        description: "Legion Park <br /> A hub on the North Shore Channel Trail."
+        }
+        description: "A hub on the North Shore Channel Trail."
     },
     {
+        ""
         position: {
-            latitude: 42.037531116813724,
-            longitude: -87.7104209976362,
-            zoom: 13
-        },
+        latitude: 42.037531116813724,
+        longitude: -87.7104209976362,
+        zoom: 13
+    }
         description: "Sculpture Park <br /> A park with some interesting sculptures.  They change them up every once in a while"
     },
-    {
+{
+    name: "Chicago Botanic Garden",
         position: {
-            lat: 42.15128810190887,
+        lat: 42.15128810190887,
             lng: -87.78428644734801,
-            zoom: 13
-        },
-        description: "Chicago Botanic Garden <br /> A beautiful destination for spending a day."
+                zoom: 13
     },
-    {
+    description: "A beautiful destination for spending a day."
+},
+{
+    name: "The 606",
         position: {
-            lat: 41.913908941901596,
+        lat: 41.913908941901596,
             lng: -87.72013180311839,
-            zoom: 13
-        },
-        description: "The 606 <br /> An awesome bike path."
+                zoom: 13
     },
+    description: "An awesome bike path."
+},
 ];
 
 const userSeed = {

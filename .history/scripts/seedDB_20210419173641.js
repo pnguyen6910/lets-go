@@ -88,58 +88,45 @@ const pointsSeed = [
     {
         position: {
             latitude: 41.97933649765679,
-            longitude: -87.64982506368884,
-            zoom: 13
+            longitude: -87.64982506368884
         },
         popup: "Foster Beach <br /> Have some fun in the sun."
     },
     {
-        position: {
-            latitude: 41.795976907272824,
-            longitude: -87.57479364081703,
-            zoom: 13
-        },
-        description: "Museum of Science and Industry <br /> Visit Sue when you're there, or see the U505.  The Omnimax is pretty cool too."
+        name: "Museum of Science and Industry",
+        latitude: 41.795976907272824,
+        longitude: -87.57479364081703,
+        description: "Visit Sue when you're there, or see the U505.  The Omnimax is pretty cool too."
     },
     {
-        position: {
-            latitude: 41.91813486644659,
-            longitude: -87.62737811671859,
-            zoom: 13
-        },
-        description: "North Avenue Beach <br /> Another nice Chicago beach."
+        name: "North Avenue Beach",
+        latitude: 41.91813486644659,
+        longitude: -87.62737811671859,
+        description: "Another nice Chicago beach."
     },
     {
-        position: {
-            latitude: 41.98420770046654,
-            longitude: -87.70643776164125,
-            zoom: 13
-        },
-        description: "Legion Park <br /> A hub on the North Shore Channel Trail."
+        name: "Legion Park",
+        latitude: 41.98420770046654,
+        longitude: -87.70643776164125,
+        description: "A hub on the North Shore Channel Trail."
     },
     {
-        position: {
-            latitude: 42.037531116813724,
-            longitude: -87.7104209976362,
-            zoom: 13
-        },
+        ""
+        latitude: 42.037531116813724,
+        longitude: -87.7104209976362,
         description: "Sculpture Park <br /> A park with some interesting sculptures.  They change them up every once in a while"
     },
     {
-        position: {
-            lat: 42.15128810190887,
-            lng: -87.78428644734801,
-            zoom: 13
-        },
-        description: "Chicago Botanic Garden <br /> A beautiful destination for spending a day."
+        name: "Chicago Botanic Garden",
+        latitude: 42.15128810190887,
+        longitude: -87.78428644734801,
+        description: "A beautiful destination for spending a day."
     },
     {
-        position: {
-            lat: 41.913908941901596,
-            lng: -87.72013180311839,
-            zoom: 13
-        },
-        description: "The 606 <br /> An awesome bike path."
+        name: "The 606",
+        latitude: 41.913908941901596,
+        longitude: -87.72013180311839,
+        description: "An awesome bike path."
     },
 ];
 
