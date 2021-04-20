@@ -180,14 +180,6 @@ const pointsSeed = [
             zoom: 13
         },
         popup: "Vape312 Sheffield <br /> Chicago's number 1 vape store."
-    },
-    {
-        position: {
-            lat: 41.92114554032679,
-            lng: -87.69518584012985,
-            zoom: 13
-        },
-        popup: "Greetings from Chicago Mural <br /> One of the must see murals in Chicago."
     }
 ];
 

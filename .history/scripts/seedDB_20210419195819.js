@@ -187,7 +187,7 @@ const pointsSeed = [
             lng: -87.69518584012985,
             zoom: 13
         },
-        popup: "Greetings from Chicago Mural <br /> One of the must see murals in Chicago."
+        popup: "Greetings from Chicago Mural <br /> One of the must see murals in Chicago"
     }
 ];
 
