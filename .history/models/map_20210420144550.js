@@ -3,8 +3,12 @@ const Schema = mongoose.Schema
 
 const mapSchema = new Schema({
     position: {
-        lat: Schema.Types.Decimal128,
-        lng: Schema.Types.Decimal128,
+        lat: {
+            type: Integer,
+        },
+        lng: {
+            type: Integer,
+        }
     },
     popup: {
         type: String,

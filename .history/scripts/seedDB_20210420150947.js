@@ -313,7 +313,7 @@ const runSeeder = async () => {
         const user = await db.User.create(finalUserData)
         await db.Map.update({}, { user: user._id })
     } catch (err) {
-        throw err
+        throw new err
     }
     process.exit()
 }
