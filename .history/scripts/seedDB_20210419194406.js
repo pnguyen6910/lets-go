@@ -159,19 +159,19 @@ const pointsSeed = [
     },
     {
         position: {
-            lat: 41.9643007434533,
-            lng: -87.64208078384398,
+            lat: ,
+            lng: ,
             zoom: 13
         },
-        popup: "Cricket Hill <br /> A big ol' hill! People come out here to hang out during the summer and sledding during the winter."
+        popup:
     },
     {
         position: {
-            lat: 41.97300565065028,
-            lng: -87.65779316425322,
+            lat: ,
+            lng: ,
             zoom: 13
         },
-        popup: "Generations <br /> A mural that shows the history of the Uptown neighborhood."
+        popup:
     },
 ];
 

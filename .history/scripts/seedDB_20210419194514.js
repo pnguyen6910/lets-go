@@ -167,11 +167,11 @@ const pointsSeed = [
     },
     {
         position: {
-            lat: 41.97300565065028,
-            lng: -87.65779316425322,
+            lat: ,
+            lng: ,
             zoom: 13
         },
-        popup: "Generations <br /> A mural that shows the history of the Uptown neighborhood."
+        popup:
     },
 ];
 

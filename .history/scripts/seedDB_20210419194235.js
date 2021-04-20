@@ -151,28 +151,12 @@ const pointsSeed = [
     },
     {
         position: {
-            lat: 41.97320506184882,
-            lng: -87.65694558620451,
+            lat: ,
+            lng: ,
             zoom: 13
         },
-        popup: "John Vietnam Nguyen Mural <br /> A mural created by the community of Little Vietnam in memory of JVN."
-    },
-    {
-        position: {
-            lat: 41.9643007434533,
-            lng: -87.64208078384398,
-            zoom: 13
-        },
-        popup: "Cricket Hill <br /> A big ol' hill! People come out here to hang out during the summer and sledding during the winter."
-    },
-    {
-        position: {
-            lat: 41.97300565065028,
-            lng: -87.65779316425322,
-            zoom: 13
-        },
-        popup: "Generations <br /> A mural that shows the history of the Uptown neighborhood."
-    },
+        popup:
+    }
 ];
 
 const userSeed = {
