@@ -263,27 +263,27 @@ const pointsSeed = [
     },
     {
         position: {
-            lat: 41.84035339301721,
-            lng: -87.7185096591711,
+            lat: ,
+            lng: ,
             zoom: 13
         },
-        popup: "Las Flores de las Almas Muetras <br /> A beautiful mural in Little Village."
+        popup: ""
     },
     {
         position: {
-            lat: 41.897198180689045,
-            lng: -87.6216048002243,
+            lat: ,
+            lng: ,
             zoom: 13
         },
-        popup: "Museum Of Contemporary Art Chicago <br /> A must visit museum in Chicago."
+        popup: ""
     },
     {
         position: {
-            lat: 41.88149388218225,
-            lng: -87.62373179197311,
+            lat: ,
+            lng: ,
             zoom: 13
         },
-        popup: "Crown Fountain <br /> A fountain with faces on it."
+        popup: ""
     },
 ];
 
