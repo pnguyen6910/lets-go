@@ -287,8 +287,8 @@ const pointsSeed = [
     },
     {
         position: {
-            lat: 41.87581222833499,
-            lng: -87.61889040470123,
+            lat: ,
+            lng: ,
             zoom: 13
         },
         popup: "Buckingham Fountain <br /> A big ol' fountain. It's beautiful to watch at night."
@@ -304,7 +304,6 @@ const runSeeder = async () => {
         await db.User.remove({})
         await db.Map.remove({})
         const result = await db.Map.insertMany(pointsSeed, { raw: true })
-        console.log(result)
         const mapIds = result.map(point => point._id)
         const finalUserData = {
             ...userSeed,
@@ -313,7 +312,7 @@ const runSeeder = async () => {
         const user = await db.User.create(finalUserData)
         await db.Map.update({}, { user: user._id })
     } catch (err) {
-        throw err
+        throw new err
     }
     process.exit()
 }
