@@ -42,9 +42,7 @@ class Home extends Component {
                                 return (
                                     <Marker position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}>
                                         <Popup>
-                                            <div dangerouslySetInnerHTML={{
-                                                __html: marker.popup
-                                            }} />
+                                            <div dangerouslySetInnerHTML={marker.popup} />
                                         </Popup>
                                     </Marker>
                                 )

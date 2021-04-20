@@ -40,11 +40,9 @@ class Home extends Component {
                             <GeoJSON data={bikeRoutes} />
                             {this.state.markers.map(marker => {
                                 return (
-                                    <Marker position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}>
+                                    <Marker position={marker.position[marker.position.lat, marker.position.lng]}>
                                         <Popup>
-                                            <div dangerouslySetInnerHTML={{
-                                                __html: marker.popup
-                                            }} />
+                                            {marker.popup}
                                         </Popup>
                                     </Marker>
                                 )

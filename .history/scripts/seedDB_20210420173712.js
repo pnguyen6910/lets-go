@@ -304,6 +304,8 @@ const runSeeder = async () => {
         await db.User.remove({})
         await db.Map.remove({})
         const result = await db.Map.insertMany(pointsSeed, { raw: true })
+        console.log(result)
+        console.log(position)
         const mapIds = result.map(point => point._id)
         const finalUserData = {
             ...userSeed,
