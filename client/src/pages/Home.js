@@ -38,6 +38,7 @@ class Home extends Component {
                         </Map>
                     </div>
                 </div>
+                <img className="img-fluid" src="https://i.pinimg.com/236x/89/88/20/8988206fcd258e0c65be8e5dcf90b7fb--ride-a-bike-bike-rides.jpg" alt="logo" id="bike"></img>
             </div>
         )
     }

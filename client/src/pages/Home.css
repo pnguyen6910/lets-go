@@ -8,5 +8,16 @@
     width: 100%;
 }
 
+/* #bike {
+    position: relative;
+    animation: bikeMove 5s infinite;
+    animation-timing-function: ease;
+    @keyframes bikeMove {
+        from {left: 0px;}
+        to {left: 600px}
+    } */
+
+}
+
 }
     
