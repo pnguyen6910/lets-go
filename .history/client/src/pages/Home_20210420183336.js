@@ -38,17 +38,15 @@ class Home extends Component {
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
                             <GeoJSON data={bikeRoutes} />
-                            {this.state.markers.map(marker => {
+                            {/* {this.state.markers.map(marker => {
                                 return (
-                                    <Marker position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}>
+                                    <Marker position={marker.position}>
                                         <Popup>
-                                            <div dangerouslySetInnerHTML={{
-                                                __html: marker.popup
-                                            }} />
+                                            {marker.popup}
                                         </Popup>
                                     </Marker>
                                 )
-                            })}
+                            })} */}
                         </Map>
                     </div>
                 </div>

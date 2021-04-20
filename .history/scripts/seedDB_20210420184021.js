@@ -11,7 +11,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Soldier Field <br /> The Chicago Bears play here."
+            "Soldier Field \n The Chicago Bears play here."
     },
     {
         position: {

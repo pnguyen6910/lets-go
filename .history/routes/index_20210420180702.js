@@ -1,0 +1,1 @@
+const mapRoutes = require('./map')
