@@ -10,20 +10,18 @@ import API from '../utils/API'
 
 class Home extends Component {
     state = {
-        markers: [],
-        lat: 41.875440756396515,
-        lng: -87.62412071228027
+        lat: 41.878113,
+        lng: -87.629799,
+        zoom: 13
     }
 
 
     componentDidMount() {
-        API.getPoints()
-            .then(response => this.setState({ markers: response.data }))
+
     }
 
     render() {
         const position = [this.state.lat, this.state.lng];
-        console.log(this.state.markers)
         return (
             <div className="container">
                 <div className='row'>
@@ -38,21 +36,14 @@ class Home extends Component {
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
                             <GeoJSON data={bikeRoutes} />
-                            {this.state.markers.map(marker => {
-                                return (
-                                    <Marker position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}>
-                                        <Popup>
-                                            <div dangerouslySetInnerHTML={{
-                                                __html: marker.popup
-                                            }} />
-                                        </Popup>
-                                    </Marker>
-                                )
-                            })}
+                            <Marker position={position}>
+                                <Popup>
+                                    A pretty CSS3 popup. <br /> Easily customizable.
+                                </Popup>
+                            </Marker>
                         </Map>
                     </div>
                 </div>
-                <img className="img-fluid" src="https://i.pinimg.com/236x/89/88/20/8988206fcd258e0c65be8e5dcf90b7fb--ride-a-bike-bike-rides.jpg" alt="logo" id="bike"></img>
             </div>
         )
     }

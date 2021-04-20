@@ -11,8 +11,6 @@ import API from '../utils/API'
 class Home extends Component {
     state = {
         markers: [],
-        lat: 41.875440756396515,
-        lng: -87.62412071228027
     }
 
 
@@ -22,8 +20,6 @@ class Home extends Component {
     }
 
     render() {
-        const position = [this.state.lat, this.state.lng];
-        console.log(this.state.markers)
         return (
             <div className="container">
                 <div className='row'>
@@ -38,21 +34,18 @@ class Home extends Component {
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
                             <GeoJSON data={bikeRoutes} />
-                            {this.state.markers.map(marker => {
+                            {/* {this.state.markers.map(marker => {
                                 return (
-                                    <Marker position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}>
+                                    <Marker position={marker.position}>
                                         <Popup>
-                                            <div dangerouslySetInnerHTML={{
-                                                __html: marker.popup
-                                            }} />
+                                            {marker.popup}
                                         </Popup>
                                     </Marker>
                                 )
-                            })}
+                            })} */}
                         </Map>
                     </div>
                 </div>
-                <img className="img-fluid" src="https://i.pinimg.com/236x/89/88/20/8988206fcd258e0c65be8e5dcf90b7fb--ride-a-bike-bike-rides.jpg" alt="logo" id="bike"></img>
             </div>
         )
     }

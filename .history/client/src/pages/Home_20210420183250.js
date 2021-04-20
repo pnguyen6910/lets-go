@@ -23,7 +23,6 @@ class Home extends Component {
 
     render() {
         const position = [this.state.lat, this.state.lng];
-        console.log(this.state.markers)
         return (
             <div className="container">
                 <div className='row'>
@@ -40,11 +39,9 @@ class Home extends Component {
                             <GeoJSON data={bikeRoutes} />
                             {this.state.markers.map(marker => {
                                 return (
-                                    <Marker position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}>
+                                    <Marker position={marker.position}>
                                         <Popup>
-                                            <div dangerouslySetInnerHTML={{
-                                                __html: marker.popup
-                                            }} />
+                                            {marker.popup}
                                         </Popup>
                                     </Marker>
                                 )
@@ -52,7 +49,6 @@ class Home extends Component {
                         </Map>
                     </div>
                 </div>
-                <img className="img-fluid" src="https://i.pinimg.com/236x/89/88/20/8988206fcd258e0c65be8e5dcf90b7fb--ride-a-bike-bike-rides.jpg" alt="logo" id="bike"></img>
             </div>
         )
     }
