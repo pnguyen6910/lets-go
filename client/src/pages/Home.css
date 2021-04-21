@@ -1,12 +1,40 @@
 @media screen and (max-width: 768px) {
 
-.col-3 {
-    width: 100%;
-}
+    .col-3 {
+        width: 100%;
+    }
 
-.col-9 {
-    width: 100%;
-}
+    .col-9 {
+        width: 100%;
+    }
+
+    #bike {
+        width: 50px;
+        height:50px;
+        position: relative;
+        animation: bikeMove 10s infinite;
+        animation-timing-function: ease;
+        /* animation-direction: alternate-reverse; */
+    }
+
+    @keyframes bikeMove {
+        from {left: 0px;}
+        to {left: 200px}
+    }
+  
 
 }
     
+#bike {
+    width: 150px;
+    height:150px;
+    position: relative;
+    animation: bikeMove 10s infinite;
+    animation-timing-function: ease;
+    /* animation-direction: alternate-reverse; */
+}
+
+@keyframes bikeMove {
+    from {left: 0px;}
+    to {left: 300px}
+}
