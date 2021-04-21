@@ -1,9 +1,4 @@
-// const mapRoutes = require('./map')
-// const router = require('express').Router()
-
-// router.use('/api')
-
-const router = require('express').Router()
+const router = require('express')
 const mapController = require('../controllers/mapController')
 const userController = require('../controllers/userController')
 

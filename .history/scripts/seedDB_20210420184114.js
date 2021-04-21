@@ -11,7 +11,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Soldier Field <br /> The Chicago Bears play here."
+            "Soldier Field \n The Chicago Bears play here."
     },
     {
         position: {
@@ -20,7 +20,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Willis Tower <br /> We all really know it's the Sears Tower!"
+            "Willis Tower \n We all really know it's the Sears Tower!"
     },
     {
         position: {
@@ -29,7 +29,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Art Institue of Chicago <br /> Vits brevism Ars longa."
+            "Art Institue of Chicago \n Vits brevism Ars longa."
     },
     {
         position: {
@@ -38,7 +38,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Cloud Gate <br /> Otherwise known as The Bean."
+            "Cloud Gate \n Otherwise known as The Bean."
     },
     {
         position: {
@@ -47,7 +47,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Navy Pier <br /> Popular Tourist attraction. Go ride the Ferris Wheel!"
+            "Navy Pier \n Popular Tourist attraction. Go ride the Ferris Wheel!"
     },
     {
         position: {
@@ -56,7 +56,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Maria's Packaged Goods and Community Bar <br /> Best bar in Bridgeport. Tell 'em Ryan sent you."
+            "Maria's Packaged Goods and Community Bar \n Best bar in Bridgeport. Tell 'em Ryan sent you."
     },
     {
         position: {
@@ -65,7 +65,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Montrose Beach <br /> They've got the best dog park in the Nation."
+            "Montrose Beach \n They've got the best dog park in the Nation."
     },
     {
         position: {
@@ -74,7 +74,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Wrigley Field <br /> Home of the Chicago Cubs, holy cow!"
+            "Wrigley Field \n Home of the Chicago Cubs, holy cow!"
     },
     {
         position: {
@@ -83,7 +83,7 @@ const pointsSeed = [
             zoom: 13
         },
         popup:
-            "Lincoln Park Zoo <br /> Come see some animals."
+            "Lincoln Park Zoo \n Come see some animals."
     },
     {
         position: {
@@ -91,7 +91,7 @@ const pointsSeed = [
             lng: -87.64982506368884,
             zoom: 13
         },
-        popup: "Foster Beach <br /> Have some fun in the sun."
+        popup: "Foster Beach \n Have some fun in the sun."
     },
     {
         position: {
@@ -99,7 +99,7 @@ const pointsSeed = [
             lng: -87.57479364081703,
             zoom: 13
         },
-        popup: "Museum of Science and Industry <br /> Visit Sue when you're there, or see the U505.  The Omnimax is pretty cool too."
+        popup: "Museum of Science and Industry \n Visit Sue when you're there, or see the U505.  The Omnimax is pretty cool too."
     },
     {
         position: {
@@ -107,7 +107,7 @@ const pointsSeed = [
             lng: -87.62737811671859,
             zoom: 13
         },
-        popup: "North Avenue Beach <br /> Another nice Chicago beach."
+        popup: "North Avenue Beach \n Another nice Chicago beach."
     },
     {
         position: {
@@ -115,7 +115,7 @@ const pointsSeed = [
             lng: -87.70643776164125,
             zoom: 13
         },
-        popup: "Legion Park <br /> A hub on the North Shore Channel Trail."
+        popup: "Legion Park \n A hub on the North Shore Channel Trail."
     },
     {
         position: {
@@ -123,7 +123,7 @@ const pointsSeed = [
             lng: -87.7104209976362,
             zoom: 13
         },
-        popup: "Sculpture Park <br /> A park with some interesting sculptures.  They change them up every once in a while"
+        popup: "Sculpture Park \n A park with some interesting sculptures.  They change them up every once in a while"
     },
     {
         position: {
@@ -131,7 +131,7 @@ const pointsSeed = [
             lng: -87.78428644734801,
             zoom: 13
         },
-        popup: "Chicago Botanic Garden <br /> A beautiful destination for spending a day."
+        popup: "Chicago Botanic Garden \n A beautiful destination for spending a day."
     },
     {
         position: {
@@ -139,7 +139,7 @@ const pointsSeed = [
             lng: -87.72013180311839,
             zoom: 13
         },
-        popup: "The 606 <br /> An awesome bike path."
+        popup: "The 606 \n An awesome bike path."
     },
     {
         position: {
@@ -147,7 +147,7 @@ const pointsSeed = [
             lng: -87.63641595840454,
             zoom: 13
         },
-        popup: "Montrose Harbor <br /> A place where people parks their boats, more known for people just hanging out at the harbor."
+        popup: "Montrose Harbor \n A place where people parks their boats, more known for people just hanging out at the harbor."
     },
     {
         position: {
@@ -155,7 +155,7 @@ const pointsSeed = [
             lng: -87.65694558620451,
             zoom: 13
         },
-        popup: "John Vietnam Nguyen Mural <br /> A mural created by the community of Little Vietnam in memory of JVN."
+        popup: "John Vietnam Nguyen Mural \n A mural created by the community of Little Vietnam in memory of JVN."
     },
     {
         position: {
@@ -163,7 +163,7 @@ const pointsSeed = [
             lng: -87.64208078384398,
             zoom: 13
         },
-        popup: "Cricket Hill <br /> A big ol' hill! People come out here to hang out during the summer and sledding during the winter."
+        popup: "Cricket Hill \n A big ol' hill! People come out here to hang out during the summer and sledding during the winter."
     },
     {
         position: {
@@ -171,7 +171,7 @@ const pointsSeed = [
             lng: -87.65779316425322,
             zoom: 13
         },
-        popup: "Generations <br /> A mural that shows the history of the Uptown neighborhood."
+        popup: "Generations \n A mural that shows the history of the Uptown neighborhood."
     },
     {
         position: {
@@ -179,7 +179,7 @@ const pointsSeed = [
             lng: -87.65403002500534,
             zoom: 13
         },
-        popup: "Vape312 Sheffield <br /> Chicago's number 1 vape store."
+        popup: "Vape312 Sheffield \n Chicago's number 1 vape store."
     },
     {
         position: {
@@ -187,7 +187,7 @@ const pointsSeed = [
             lng: -87.69518584012985,
             zoom: 13
         },
-        popup: "Greetings from Chicago Mural <br /> One of the must see murals in Chicago."
+        popup: "Greetings from Chicago Mural \n One of the must see murals in Chicago."
     },
     {
         position: {
@@ -195,7 +195,7 @@ const pointsSeed = [
             lng: -87.68958806991577,
             zoom: 13
         },
-        popup: "Robin Williams Mural <br /> A mural dedicated to everyone's favorite funny man."
+        popup: "Robin Williams Mural \n A mural dedicated to everyone's favorite funny man."
     },
     {
         position: {
@@ -203,7 +203,7 @@ const pointsSeed = [
             lng: -87.66963645815848,
             zoom: 13
         },
-        popup: "Vivian Maier <br /> A beautiful mural in Wicker Park."
+        popup: "Vivian Maier \n A beautiful mural in Wicker Park."
     },
     {
         position: {
@@ -211,7 +211,7 @@ const pointsSeed = [
             lng: -87.62371234595776,
             zoom: 13
         },
-        popup: "Marilyn Monroe <br /> A beautiful mural of Marilyn Monroe right on Michigan Ave."
+        popup: "Marilyn Monroe \n A beautiful mural of Marilyn Monroe right on Michigan Ave."
     },
     {
         position: {
@@ -219,7 +219,7 @@ const pointsSeed = [
             lng: -87.62620076537132,
             zoom: 13
         },
-        popup: "Moose Bubblegum <br /> A mural outside of Columbia College."
+        popup: "Moose Bubblegum \n A mural outside of Columbia College."
     },
     {
         position: {
@@ -227,7 +227,7 @@ const pointsSeed = [
             lng: -87.62459814548492,
             zoom: 13
         },
-        popup: "From Bloom To Doom <br /> You like flowers? You like birds? This is definitely the mural for you."
+        popup: "From Bloom To Doom \n You like flowers? You like birds? This is definitely the mural for you."
     },
     {
         position: {
@@ -235,7 +235,7 @@ const pointsSeed = [
             lng: -87.64685511589049,
             zoom: 13
         },
-        popup: "Piccolo Sogno <br /> A mural from Eric Skotnes on a blank wall on Piccolo Sogno."
+        popup: "Piccolo Sogno \n A mural from Eric Skotnes on a blank wall on Piccolo Sogno."
     },
     {
         position: {
@@ -243,7 +243,7 @@ const pointsSeed = [
             lng: -87.64992758631706,
             zoom: 13
         },
-        popup: "Riverfront Roots <br /> An abstract mural on the side of a bridge."
+        popup: "Riverfront Roots \n An abstract mural on the side of a bridge."
     },
     {
         position: {
@@ -251,7 +251,7 @@ const pointsSeed = [
             lng: -87.64676660299301,
             zoom: 13
         },
-        popup: "What I Am <br /> A mural on the corner of State an 16th st in South Loop."
+        popup: "What I Am \n A mural on the corner of State an 16th st in South Loop."
     },
     {
         position: {
@@ -259,7 +259,7 @@ const pointsSeed = [
             lng: -87.63287544250487,
             zoom: 13
         },
-        popup: "Blue & White Flowers <br /> A mural in Chcago's china town."
+        popup: "Blue & White Flowers \n A mural in Chcago's china town."
     },
     {
         position: {
@@ -267,7 +267,7 @@ const pointsSeed = [
             lng: -87.7185096591711,
             zoom: 13
         },
-        popup: "Las Flores de las Almas Muetras <br /> A beautiful mural in Little Village."
+        popup: "Las Flores de las Almas Muetras \n A beautiful mural in Little Village."
     },
     {
         position: {
@@ -275,7 +275,7 @@ const pointsSeed = [
             lng: -87.6216048002243,
             zoom: 13
         },
-        popup: "Museum Of Contemporary Art Chicago <br /> A must visit museum in Chicago."
+        popup: "Museum Of Contemporary Art Chicago \n A must visit museum in Chicago."
     },
     {
         position: {
@@ -283,7 +283,7 @@ const pointsSeed = [
             lng: -87.62373179197311,
             zoom: 13
         },
-        popup: "Crown Fountain <br /> A fountain with faces on it."
+        popup: "Crown Fountain \n A fountain with faces on it."
     },
     {
         position: {
@@ -291,7 +291,7 @@ const pointsSeed = [
             lng: -87.61889040470123,
             zoom: 13
         },
-        popup: "Buckingham Fountain <br /> A big ol' fountain. It's beautiful to watch at night."
+        popup: "Buckingham Fountain \n A big ol' fountain. It's beautiful to watch at night."
     }
 ];
 
