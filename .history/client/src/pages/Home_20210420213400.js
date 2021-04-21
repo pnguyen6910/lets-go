@@ -25,7 +25,7 @@ class Home extends Component {
             .then(response => history.push('/'))
             .catch(err => console.log(err))
     }
-    //for geolocation in map
+
     // useEffect(() {
     //     const { current = {} } = mapRef
     //     const { leafletElement: map } = current
