@@ -21,7 +21,7 @@ class Home extends Component {
         const { marker } = this.state
         marker.push([e.latlng.lat, e.latlng.lng])
         this.setState({ marker })
-        API.createPoint({ marker })
+        API.createPoint(postData)
             .then(response => history.push('/'))
             .catch(err => console.log(err))
     }

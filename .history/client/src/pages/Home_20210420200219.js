@@ -7,24 +7,15 @@ import bikeRoutes from '../utils/Bikeroutes.json'
 import Icon from '../components/Icon'
 import "leaflet/dist/leaflet.css"
 import API from '../utils/API'
+import SearchControl from "../components/GeoSearch"
 
 class Home extends Component {
     state = {
         markers: [],
         lat: 41.875440756396515,
-        lng: -87.62412071228027,
-        marker: []
+        lng: -87.62412071228027
     }
 
-    addMarker = (e) => {
-        console.log(e)
-        const { marker } = this.state
-        marker.push([e.latlng.lat, e.latlng.lng])
-        this.setState({ marker })
-        API.createPoint({ marker })
-            .then(response => history.push('/'))
-            .catch(err => console.log(err))
-    }
 
     componentDidMount() {
         API.getPoints()
@@ -33,6 +24,7 @@ class Home extends Component {
 
     render() {
         const position = [this.state.lat, this.state.lng];
+        console.log(this.state.markers)
         return (
             <div className="container">
                 <div className='row'>
@@ -40,13 +32,7 @@ class Home extends Component {
                         <Search />
                     </div>
                     <div className="col-9">
-                        <Map
-                            className="map"
-                            center={position}
-                            zoom={13}
-                            scrollWheelZoom={true}
-                            onClick={this.addMarker}
-                        >
+                        <Map className="map" center={position} zoom={13} scrollWheelZoom={true}>
 
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

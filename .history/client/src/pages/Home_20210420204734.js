@@ -17,13 +17,9 @@ class Home extends Component {
     }
 
     addMarker = (e) => {
-        console.log(e)
         const { marker } = this.state
-        marker.push([e.latlng.lat, e.latlng.lng])
+        markers.push(e.latlng)
         this.setState({ marker })
-        API.createPoint({ marker })
-            .then(response => history.push('/'))
-            .catch(err => console.log(err))
     }
 
     componentDidMount() {
@@ -33,6 +29,7 @@ class Home extends Component {
 
     render() {
         const position = [this.state.lat, this.state.lng];
+        console.log(this.state.markers)
         return (
             <div className="container">
                 <div className='row'>

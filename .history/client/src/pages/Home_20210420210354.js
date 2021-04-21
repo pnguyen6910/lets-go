@@ -19,11 +19,8 @@ class Home extends Component {
     addMarker = (e) => {
         console.log(e)
         const { marker } = this.state
-        marker.push([e.latlng.lat, e.latlng.lng])
+        marker.push([e.lat, e.lng])
         this.setState({ marker })
-        API.createPoint({ marker })
-            .then(response => history.push('/'))
-            .catch(err => console.log(err))
     }
 
     componentDidMount() {
