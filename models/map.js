@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-
 const mapSchema = new Schema({
     position: {
         lat: Schema.Types.Decimal128,
@@ -19,7 +18,5 @@ const mapSchema = new Schema({
         ref: 'User'
     }
 })
-
 const Map = mongoose.model('Map', mapSchema)
-
 module.exports = Map
