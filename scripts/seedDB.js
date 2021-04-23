@@ -319,8 +319,8 @@ const pointsSeed = [
     },
     {
         position: {
-            lat: 42.13561784578918,
-            lng: -87.90211916537393,
+            lat: 41.997319614023475,
+            lng: -87.78704819986068,
             zoom: 13
         },
         location: "Superdawg",
@@ -328,8 +328,8 @@ const pointsSeed = [
     },
     {
         position: {
-            lat: 42.010444130188354,
-            lng: -87.71378403709195,
+            lat: 42.01042818664619,
+            lng: -87.7141166308696,
             zoom: 13
         },
         location: "Lincolnwood Town Center",
