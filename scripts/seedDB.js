@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mapPoints");
-
 const pointsSeed = [
     {
         position: {
@@ -318,13 +316,23 @@ const pointsSeed = [
         },
         location: "Buckingham Fountain",
         details: "A big ol' fountain. It's beautiful to watch at night."
+<<<<<<< HEAD
+    },
+    {
+        position: {
+            lat: 41.86636498632577,
+            lng: -87.61699676513672,
+            zoom: 13
+        },
+        location: "Field Museum of Natural History",
+        details: "A wonder museum. Definitely a must see"
+=======
+>>>>>>> 780f86d035d574b744b0cb4f9a946d217400bf1f
     }
 ];
-
 const userSeed = {
     username: 'admin',
 }
-
 const runSeeder = async () => {
     try {
         await db.User.remove({})
@@ -342,5 +350,4 @@ const runSeeder = async () => {
     }
     process.exit()
 }
-
 runSeeder()
