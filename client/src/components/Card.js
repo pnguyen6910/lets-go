@@ -22,10 +22,10 @@ class Card extends Component {
 
     render() {
 
-        return (<div className="container-fluid">
+        return (<div className="data-container container-fluid overflow-auto">
             {this.state.markers.map(marker => {
                 return (
-                    <div>
+                    <div class="card">
                         <strong>{marker.location}</strong>
                         <h6>{marker.details}</h6>
                     </div>
