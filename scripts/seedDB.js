@@ -316,6 +316,7 @@ const pointsSeed = [
         },
         location: "Buckingham Fountain",
         details: "A big ol' fountain. It's beautiful to watch at night."
+<<<<<<< HEAD
     },
     {
         position: {
@@ -325,6 +326,8 @@ const pointsSeed = [
         },
         location: "Field Museum of Natural History",
         details: "A wonder museum. Definitely a must see"
+=======
+>>>>>>> 665544e921ba1ec4a0f0e11faea8eee2dea5843d
     }
 ];
 const userSeed = {
