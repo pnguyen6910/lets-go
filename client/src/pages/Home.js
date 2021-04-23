@@ -1,19 +1,60 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import Search from '../components/Search'
 import './Home.css'
-import L from 'leaflet'
 import { TileLayer, Marker, Popup, Map, GeoJSON } from 'react-leaflet'
 import bikeRoutes from '../utils/Bikeroutes.json'
-import Icon from '../components/Icon'
 import "leaflet/dist/leaflet.css"
 import API from '../utils/API'
+import L from 'leaflet';
+// import icon from './icon.jpg';
+import Icon from '../components/Icon'
+import Card from '../components/Card'
 
 class Home extends Component {
     state = {
         markers: [],
         lat: 41.875440756396515,
-        lng: -87.62412071228027
+        lng: -87.62412071228027,
+        marker: []
     }
+
+    // addMarker = (e) => {
+    //     console.log(e)
+    //     const { marker } = this.state
+    //     marker.push([e.latlng.lat, e.latlng.lng])
+    //     this.setState({ marker })
+    //     API.createPoint({ marker })
+    //         .then(response => history.push('/'))
+    //         .catch(err => console.log(err))
+    // }
+    // for geolocation in map
+    // useEffect(() {
+    //     const { current = {} } = mapRef
+    //     const { leafletElement: map } = current
+
+    //     map.locate({
+    //         setView: true
+    //     })
+
+    //     map.on('locationfound', handleOnLocationFound)
+    // }, [])
+
+    // function handleOnLocationFound(e) {
+    //     const latlng = e.latlng
+    //     const radius = e.accuracy
+    //     const circle = L.circle(latlng, radius)
+    //     const { current = {} } = mapRef
+    //     const { leafletElement: map } = current
+    //     circle.addTo(map)
+    // }
+
+    // useEffect(() => {
+    //     const icon = new L.Icon({
+    //         iconUrl: icon,
+    //         iconSize: [26, 26],
+    //         popupAnchor: [0, -15]
+    //     })
+    // })
 
 
     componentDidMount() {
@@ -23,15 +64,21 @@ class Home extends Component {
 
     render() {
         const position = [this.state.lat, this.state.lng];
-        console.log(this.state.markers)
         return (
             <div className="container">
                 <div className='row'>
                     <div className="col-3">
                         <Search />
+                        <Card />
                     </div>
                     <div className="col-9">
-                        <Map className="map" center={position} zoom={13} scrollWheelZoom={true}>
+                        <Map
+                            className="map"
+                            center={position}
+                            zoom={13}
+                            scrollWheelZoom={true}
+                        // onClick={this.addMarker}
+                        >
 
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -40,11 +87,13 @@ class Home extends Component {
                             <GeoJSON data={bikeRoutes} />
                             {this.state.markers.map(marker => {
                                 return (
-                                    <Marker position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}>
+                                    <Marker
+                                        position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}
+                                        icon={Icon}
+                                    >
                                         <Popup>
-                                            <div dangerouslySetInnerHTML={{
-                                                __html: marker.popup
-                                            }} />
+                                            <h6>{marker.location}</h6>
+                                            {marker.details}
                                         </Popup>
                                     </Marker>
                                 )
@@ -52,7 +101,6 @@ class Home extends Component {
                         </Map>
                     </div>
                 </div>
-                <img className="img-fluid" src="https://i.pinimg.com/236x/89/88/20/8988206fcd258e0c65be8e5dcf90b7fb--ride-a-bike-bike-rides.jpg" alt="logo" id="bike"></img>
             </div>
         )
     }
