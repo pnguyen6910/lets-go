@@ -1,5 +1,5 @@
 .data-container {
-    height: 50vh;
+    height: 80vh;
     padding: 0;
 }
 
@@ -12,6 +12,7 @@
 
 .margin {
     margin-top: 5px;
+    margin-left: 5px;
 }
 
 @media screen and (max-width: 768px) {
