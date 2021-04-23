@@ -8,7 +8,6 @@ import API from '../utils/API'
 import L from 'leaflet';
 // import icon from './icon.jpg';
 import Icon from '../components/Icon'
-// import useGeoLocation from '../components/useGeolocation'
 
 class Home extends Component {
     state = {

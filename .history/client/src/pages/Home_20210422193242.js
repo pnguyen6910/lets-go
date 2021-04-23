@@ -8,7 +8,6 @@ import API from '../utils/API'
 import L from 'leaflet';
 // import icon from './icon.jpg';
 import Icon from '../components/Icon'
-// import useGeoLocation from '../components/useGeolocation'
 
 class Home extends Component {
     state = {
@@ -17,7 +16,6 @@ class Home extends Component {
         lng: -87.62412071228027,
         marker: []
     }
-
 
     // addMarker = (e) => {
     //     console.log(e)
@@ -33,6 +31,29 @@ class Home extends Component {
     //     const { current = {} } = mapRef
     //     const { leafletElement: map } = current
 
+    //     map.locate({
+    //         setView: true
+    //     })
+
+    //     map.on('locationfound', handleOnLocationFound)
+    // }, [])
+
+    // function handleOnLocationFound(e) {
+    //     const latlng = e.latlng
+    //     const radius = e.accuracy
+    //     const circle = L.circle(latlng, radius)
+    //     const { current = {} } = mapRef
+    //     const { leafletElement: map } = current
+    //     circle.addTo(map)
+    // }
+
+    // useEffect(() => {
+    //     const icon = new L.Icon({
+    //         iconUrl: icon,
+    //         iconSize: [26, 26],
+    //         popupAnchor: [0, -15]
+    //     })
+    // })
 
 
     componentDidMount() {

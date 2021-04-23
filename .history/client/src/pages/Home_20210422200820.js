@@ -8,7 +8,7 @@ import API from '../utils/API'
 import L from 'leaflet';
 // import icon from './icon.jpg';
 import Icon from '../components/Icon'
-// import useGeoLocation from '../components/useGeolocation'
+import useGeoLocation from '../components/useGeoLocation'
 
 class Home extends Component {
     state = {
@@ -51,7 +51,7 @@ class Home extends Component {
                     <div className="col-9">
                         <Map
                             className="map"
-                            center={position}
+                            center={useGeoLocation}
                             zoom={13}
                             scrollWheelZoom={true}
                         // onClick={this.addMarker}

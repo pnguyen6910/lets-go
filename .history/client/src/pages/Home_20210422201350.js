@@ -51,7 +51,7 @@ class Home extends Component {
                     <div className="col-9">
                         <Map
                             className="map"
-                            center={position}
+                            center={useGeoLocation}
                             zoom={13}
                             scrollWheelZoom={true}
                         // onClick={this.addMarker}
