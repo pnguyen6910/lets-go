@@ -9,7 +9,7 @@ const pointsSeed = [
             zoom: 13
         },
         location: "Soldier Field",
-        details: "The Chicago Bears play here."
+        details: "Da Bears play here."
     },
     {
         position: {
@@ -27,7 +27,7 @@ const pointsSeed = [
             zoom: 13
         },
         location: "Art Institue of Chicago",
-        details: "Vits brevism Ars longa."
+        details: "Vita brevis, Ars longa."
     },
     {
         position: {
@@ -99,7 +99,7 @@ const pointsSeed = [
             zoom: 13
         },
         location: "Museum of Science and Industry",
-        details: "Visit Sue when you're there, or see the U505.  The Omnimax is pretty cool too."
+        details: "Visit the U505.  The Omnimax is pretty cool too."
     },
     {
         position: {
@@ -316,6 +316,114 @@ const pointsSeed = [
         },
         location: "Buckingham Fountain",
         details: "A big ol' fountain. It's beautiful to watch at night."
+    },
+    {
+        position: {
+            lat: 42.13561784578918,
+            lng: -87.90211916537393,
+            zoom: 13
+        },
+        location: "Superdawg",
+        details: "An iconic hotdog joint.  It's at the start of Des Plaines River Trail."
+    },
+    {
+        position: {
+            lat: 42.010444130188354,
+            lng: -87.71378403709195,
+            zoom: 13
+        },
+        location: "Lincolnwood Town Center",
+        details: "A mall on the North Shore Channel Trail."
+    },
+    {
+        position: {
+            lat: 41.98329398208941,
+            lng: -87.71295113524167,
+            zoom: 13
+        },
+        location: "Bryn Mawr Breakfast Club",
+        details: "Get some breakfast."
+    },
+    {
+        position: {
+            lat: 41.96221059089123,
+            lng: -87.68150925693635,
+            zoom: 13
+        },
+        location: "Half Acre Beer Company",
+        details: "Grab a beer and have some food at this iconic Chicago brewery."
+    },
+    {
+        position: {
+            lat: 41.86646871405529,
+            lng: -87.61693758682983,
+            zoom: 13
+        },
+        location: "Field Museum",
+        details: "Go see Sue!"
+    },
+    {
+        position: {
+            lat: 41.91152346759195,
+            lng: -87.62490368682832,
+            zoom: 13
+        },
+        location: "Chess Pavillion",
+        details: "A nice stopping point on the trail to meet up and play chess."
+    },
+    {
+        position: {
+            lat: 41.90331769427661,
+            lng: -87.62241446778263,
+            zoom: 13
+        },
+        location: "Oak Street Beach",
+        details: "Another fine lakefront Chicago beach."
+    },
+    {
+        position: {
+            lat: 41.89308470369228,
+            lng: -87.61280746281695,
+            zoom: 13
+        },
+        location: "Jane Addams Memorial Park",
+        details: "Look for some interesting sculptures in this park by Navy Pier."
+    },
+    {
+        position: {
+            lat: 41.91329529391243,
+            lng: -87.62113414450002,
+            zoom: 13
+        },
+        location: "Photography Park",
+        details: "A great spot to take photos of the Chicago skyline."
+    },
+    {
+        position: {
+            lat: 41.87913136708439,
+            lng: -87.62501135799349,
+            zoom: 13
+        },
+        location: "Symphony Center",
+        details: "The home of the world-renowned Chicago Symphony Orchestra."
+    },
+    {
+        position: {
+            lat: 41.923783118654015,
+            lng: -87.69801898682793,
+            zoom: 13
+        },
+        location: "Revolution Brewing",
+        details: "Have a pint of Anti-Hero, or enjoy some of their more hard to find barrel aged beers."
+    },
+    {
+        position: {
+            lat: 41.92107828756141,
+            lng: -87.64566070217155,
+            zoom: 13
+        },
+        location: "Oz Park",
+        details: "Enjoy some sculptures of the main characters from 'The Wizard of Oz'."
     }
 ];
 const userSeed = {

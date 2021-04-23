@@ -1,3 +1,19 @@
+.data-container {
+    height: 50vh;
+    padding: 0;
+}
+
+.card {
+    border: 3px, solid, black;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+.margin {
+    margin-top: 5px;
+}
+
 @media screen and (max-width: 768px) {
 
     .col-3 {
