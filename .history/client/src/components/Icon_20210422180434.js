@@ -1,14 +1,14 @@
 import L from 'leaflet';
 
 const Icon = new L.Icon({
-    iconUrl: './img/icon.jpg',
-    iconRetinaUrl: './img/icon.jpg',
+    iconUrl: '../img/pin-icon.png',
+    iconRetinaUrl: '../img/pin-icon.png',
     iconAnchor: null,
-    popupAnchor: (0, 0),
+    popupAnchor: null,
     shadowUrl: null,
     shadowSize: null,
     shadowAnchor: null,
-    iconSize: (25, 25),
+    iconSize: [25, 25],
     className: 'leaflet-div-icon'
 });
 

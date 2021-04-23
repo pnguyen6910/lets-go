@@ -90,8 +90,9 @@ class Home extends Component {
                                         icon={Icon}
                                     >
                                         <Popup>
-                                            <h6>{marker.location}</h6>
-                                            {marker.details}
+                                            <div dangerouslySetInnerHTML={{
+                                                __html: marker.popup
+                                            }} />
                                         </Popup>
                                     </Marker>
                                 )

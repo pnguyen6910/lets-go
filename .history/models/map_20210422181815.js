@@ -8,9 +8,9 @@ const mapSchema = new Schema({
     },
     location: {
         type: String,
-        required: "Please enter a name"
+        required: "Please enter a name and description"
     },
-    details: {
+    description: {
         type: String,
         required: "Please enter a description"
     },

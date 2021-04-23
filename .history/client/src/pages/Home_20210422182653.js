@@ -89,10 +89,10 @@ class Home extends Component {
                                         position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}
                                         icon={Icon}
                                     >
-                                        <Popup>
-                                            <h6>{marker.location}</h6>
-                                            {marker.details}
-                                        </Popup>
+                                        {/* <Popup> */}
+                                        {/* <h6>{marker.location}</h6> */}
+                                        {/* {marker.details} */}
+                                        {/* </Popup> */}
                                     </Marker>
                                 )
                             })}

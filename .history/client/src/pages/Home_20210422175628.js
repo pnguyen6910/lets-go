@@ -17,15 +17,15 @@ class Home extends Component {
         marker: []
     }
 
-    // addMarker = (e) => {
-    //     console.log(e)
-    //     const { marker } = this.state
-    //     marker.push([e.latlng.lat, e.latlng.lng])
-    //     this.setState({ marker })
-    //     API.createPoint({ marker })
-    //         .then(response => history.push('/'))
-    //         .catch(err => console.log(err))
-    // }
+    addMarker = (e) => {
+        console.log(e)
+        const { marker } = this.state
+        marker.push([e.latlng.lat, e.latlng.lng])
+        this.setState({ marker })
+        API.createPoint({ marker })
+            .then(response => history.push('/'))
+            .catch(err => console.log(err))
+    }
     // for geolocation in map
     // useEffect(() {
     //     const { current = {} } = mapRef
@@ -75,7 +75,7 @@ class Home extends Component {
                             center={position}
                             zoom={13}
                             scrollWheelZoom={true}
-                        // onClick={this.addMarker}
+                            onClick={this.addMarker}
                         >
 
                             <TileLayer
@@ -87,11 +87,12 @@ class Home extends Component {
                                 return (
                                     <Marker
                                         position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}
-                                        icon={Icon}
+                                        icon={icon}
                                     >
                                         <Popup>
-                                            <h6>{marker.location}</h6>
-                                            {marker.details}
+                                            <div dangerouslySetInnerHTML={{
+                                                __html: marker.popup
+                                            }} />
                                         </Popup>
                                     </Marker>
                                 )

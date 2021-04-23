@@ -1,13 +1,12 @@
-import React, { Component, useEffect } from 'react'
+import React, { Component } from 'react'
 import Search from '../components/Search'
 import './Home.css'
+import L from 'leaflet'
 import { TileLayer, Marker, Popup, Map, GeoJSON } from 'react-leaflet'
 import bikeRoutes from '../utils/Bikeroutes.json'
+import Icon from '../components/Icon'
 import "leaflet/dist/leaflet.css"
 import API from '../utils/API'
-import L from 'leaflet';
-// import icon from './icon.jpg';
-import Icon from '../components/Icon'
 
 class Home extends Component {
     state = {
@@ -17,44 +16,12 @@ class Home extends Component {
         marker: []
     }
 
-    // addMarker = (e) => {
-    //     console.log(e)
-    //     const { marker } = this.state
-    //     marker.push([e.latlng.lat, e.latlng.lng])
-    //     this.setState({ marker })
-    //     API.createPoint({ marker })
-    //         .then(response => history.push('/'))
-    //         .catch(err => console.log(err))
-    // }
-    // for geolocation in map
-    // useEffect(() {
-    //     const { current = {} } = mapRef
-    //     const { leafletElement: map } = current
-
-    //     map.locate({
-    //         setView: true
-    //     })
-
-    //     map.on('locationfound', handleOnLocationFound)
-    // }, [])
-
-    // function handleOnLocationFound(e) {
-    //     const latlng = e.latlng
-    //     const radius = e.accuracy
-    //     const circle = L.circle(latlng, radius)
-    //     const { current = {} } = mapRef
-    //     const { leafletElement: map } = current
-    //     circle.addTo(map)
-    // }
-
-    // useEffect(() => {
-    //     const icon = new L.Icon({
-    //         iconUrl: icon,
-    //         iconSize: [26, 26],
-    //         popupAnchor: [0, -15]
-    //     })
-    // })
-
+    addMarker = (e) => {
+        console.log(e)
+        const { marker } = this.state
+        marker.push([e.lat, e.lng])
+        this.setState({ marker })
+    }
 
     componentDidMount() {
         API.getPoints()
@@ -75,7 +42,7 @@ class Home extends Component {
                             center={position}
                             zoom={13}
                             scrollWheelZoom={true}
-                        // onClick={this.addMarker}
+                            onClick={this.addMarker}
                         >
 
                             <TileLayer
@@ -85,13 +52,11 @@ class Home extends Component {
                             <GeoJSON data={bikeRoutes} />
                             {this.state.markers.map(marker => {
                                 return (
-                                    <Marker
-                                        position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}
-                                        icon={Icon}
-                                    >
+                                    <Marker position={[marker.position.lat.$numberDecimal, marker.position.lng.$numberDecimal]}>
                                         <Popup>
-                                            <h6>{marker.location}</h6>
-                                            {marker.details}
+                                            <div dangerouslySetInnerHTML={{
+                                                __html: marker.popup
+                                            }} />
                                         </Popup>
                                     </Marker>
                                 )
