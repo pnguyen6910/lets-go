@@ -9,7 +9,7 @@ const pointsSeed = [
             zoom: 13
         },
         location: "Soldier Field",
-        details: "The Chicago Bears play here."
+        details: "Da Bears play here."
     },
     {
         position: {
@@ -99,7 +99,7 @@ const pointsSeed = [
             zoom: 13
         },
         location: "Museum of Science and Industry",
-        details: "Visit Sue when you're there, or see the U505.  The Omnimax is pretty cool too."
+        details: "Visit the U505.  The Omnimax is pretty cool too."
     },
     {
         position: {
