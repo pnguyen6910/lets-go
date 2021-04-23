@@ -27,7 +27,7 @@ const pointsSeed = [
             zoom: 13
         },
         location: "Art Institue of Chicago",
-        details: "Vits brevism Ars longa."
+        details: "Vita brevis, Ars longa."
     },
     {
         position: {
