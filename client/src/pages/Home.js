@@ -8,6 +8,7 @@ import API from '../utils/API'
 import L from 'leaflet';
 // import icon from './icon.jpg';
 import Icon from '../components/Icon'
+import Card from '../components/Card'
 
 class Home extends Component {
     state = {
@@ -68,6 +69,7 @@ class Home extends Component {
                 <div className='row'>
                     <div className="col-3">
                         <Search />
+                        <Card />
                     </div>
                     <div className="col-9">
                         <Map
