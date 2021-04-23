@@ -1,15 +1,15 @@
 import L from 'leaflet';
 
 const Icon = new L.Icon({
-    iconUrl: './img/icon.jpg',
-    iconRetinaUrl: './img/icon.jpg',
+    iconUrl: require('./pin-icon.png'),
+    iconRetinaUrl: require('./pin-icon.png'),
     iconAnchor: null,
-    popupAnchor: (0, 0),
+    popupAnchor: null,
     shadowUrl: null,
     shadowSize: null,
     shadowAnchor: null,
-    iconSize: (25, 25),
+    iconSize: new L.Point(60, 60),
     className: 'leaflet-div-icon'
 });
 
-export default Icon;
+export default Icon

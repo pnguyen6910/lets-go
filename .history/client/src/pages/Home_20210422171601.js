@@ -1,13 +1,12 @@
-import React, { Component, useEffect } from 'react'
+import React, { Component } from 'react'
 import Search from '../components/Search'
 import './Home.css'
 import { TileLayer, Marker, Popup, Map, GeoJSON } from 'react-leaflet'
 import bikeRoutes from '../utils/Bikeroutes.json'
+// import Icon from '../components/Icon'
 import "leaflet/dist/leaflet.css"
 import API from '../utils/API'
 import L from 'leaflet';
-// import icon from './icon.jpg';
-import Icon from '../components/Icon'
 
 class Home extends Component {
     state = {
@@ -17,16 +16,16 @@ class Home extends Component {
         marker: []
     }
 
-    // addMarker = (e) => {
-    //     console.log(e)
-    //     const { marker } = this.state
-    //     marker.push([e.latlng.lat, e.latlng.lng])
-    //     this.setState({ marker })
-    //     API.createPoint({ marker })
-    //         .then(response => history.push('/'))
-    //         .catch(err => console.log(err))
-    // }
-    // for geolocation in map
+    addMarker = (e) => {
+        console.log(e)
+        const { marker } = this.state
+        marker.push([e.latlng.lat, e.latlng.lng])
+        this.setState({ marker })
+        API.createPoint({ marker })
+            .then(response => history.push('/'))
+            .catch(err => console.log(err))
+    }
+    //for geolocation in map
     // useEffect(() {
     //     const { current = {} } = mapRef
     //     const { leafletElement: map } = current
@@ -47,13 +46,17 @@ class Home extends Component {
     //     circle.addTo(map)
     // }
 
-    // useEffect(() => {
-    //     const icon = new L.Icon({
-    //         iconUrl: icon,
-    //         iconSize: [26, 26],
-    //         popupAnchor: [0, -15]
-    //     })
-    // })
+    const Icon = new L.Icon({
+        iconUrl: require('../img/icon.jpg'),
+        iconRetinaUrl: require('../img/icon.jpg'),
+        iconAnchor: null,
+        popupAnchor: null,
+        shadowUrl: null,
+        shadowSize: null,
+        shadowAnchor: null,
+        iconSize: new L.Point(60, 75),
+        className: 'leaflet-div-icon'
+    });
 
 
     componentDidMount() {
@@ -75,7 +78,7 @@ class Home extends Component {
                             center={position}
                             zoom={13}
                             scrollWheelZoom={true}
-                        // onClick={this.addMarker}
+                            onClick={this.addMarker}
                         >
 
                             <TileLayer
@@ -90,8 +93,9 @@ class Home extends Component {
                                         icon={Icon}
                                     >
                                         <Popup>
-                                            <h6>{marker.location}</h6>
-                                            {marker.details}
+                                            <div dangerouslySetInnerHTML={{
+                                                __html: marker.popup
+                                            }} />
                                         </Popup>
                                     </Marker>
                                 )

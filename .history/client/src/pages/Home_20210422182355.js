@@ -91,7 +91,7 @@ class Home extends Component {
                                     >
                                         <Popup>
                                             <h6>{marker.location}</h6>
-                                            {marker.details}
+                                            {/* {marker.details} */}
                                         </Popup>
                                     </Marker>
                                 )

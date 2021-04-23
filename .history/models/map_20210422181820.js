@@ -10,7 +10,7 @@ const mapSchema = new Schema({
         type: String,
         required: "Please enter a name"
     },
-    details: {
+    description: {
         type: String,
         required: "Please enter a description"
     },
