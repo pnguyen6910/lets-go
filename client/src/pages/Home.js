@@ -43,7 +43,7 @@ class Home extends Component {
     render() {
         const position = [this.state.lat, this.state.lng];
         return (
-            <div className="container">
+            <div>
                 <div className='row'>
                     <div className="col-3">
                         <Search />
