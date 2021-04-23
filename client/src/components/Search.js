@@ -12,7 +12,7 @@ function SearchBar() {
 
             </div>
             <div className="col-auto">
-                <button type="submit" className="btn btn-primary mb-3">Go</button>
+                <button type="submit" className="btn btn-primary mb-3 margin">Go</button>
             </div>
         </form>
 
