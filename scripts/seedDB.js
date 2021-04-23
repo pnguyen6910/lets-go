@@ -143,7 +143,16 @@ const pointsSeed = [
             lng: -87.72013180311839,
             zoom: 13
         },
-        location: "The 606",
+        location: "The 606 (West trailhead)",
+        details: "An awesome bike path."
+    },
+    {
+        position: {
+            lat: 41.91472191857104, 
+            lng: -87.66893946263313,
+            zoom: 13
+        },
+        location: "The 606 (East trailhead)",
         details: "An awesome bike path."
     },
     {
