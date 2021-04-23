@@ -29,15 +29,15 @@ class Home extends Component {
     //         .catch(err => console.log(err))
     // }
 
-    // removeMarker = (e) => {
-    //     console.log(e)
-    //     const { marker } = this.state
-    //     marker.push([e.latlng.lat, e.latlng.lng])
-    //     this.setState({ marker })
-    //     API.deletePoint({ marker })
-    //         .then(response => response.push)
-    //         .catch(err => console.log(err))
-    // }
+    removeMarker = (e) => {
+        console.log(e)
+        const { marker } = this.state
+        marker.push([e.latlng.lat, e.latlng.lng])
+        this.setState({ marker })
+        API.deletePoint({ marker })
+            .then(response => response.push)
+            .catch(err => console.log(err))
+    }
 
 
     componentDidMount() {
