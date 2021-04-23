@@ -1,7 +1,9 @@
-import React,  { Component }  from 'react';
+import React, { Component } from 'react';
 import Axios from 'axios';
 import API from '../utils/API'
 import { DivOverlay } from 'leaflet';
+
+
 
 
 class Card extends Component {
@@ -12,13 +14,14 @@ class Card extends Component {
         marker: []
     }
 
+
     componentDidMount() {
         API.getPoints()
             .then(response => this.setState({ markers: response.data }))
     }
 
     render() {
-        
+
         return (<div className="data-container container-fluid overflow-auto">
             {this.state.markers.map(marker => {
                 return (
