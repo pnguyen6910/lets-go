@@ -8,7 +8,7 @@ function SearchBar() {
         <form className="row g-3">
 
             <div className="col-auto">
-                <input className="form-control" />
+                <input className="form-control margin" />
 
             </div>
             <div className="col-auto">
