@@ -18,7 +18,7 @@ const InputForm = (props) => {
 
     return (
         <form onSubmit={handleNewStop}>
-            <label><strong>New Stop</strong></label>
+            <label>New Stop {props.marker}</label>
             <br />
             <input
                 type="text"
