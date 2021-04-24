@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mapPoints");
+mongoose.connect("mongodb+srv://Paul:moonmace@cluster0.kgcaw.mongodb.net/mapPoints?retryWrites=true&w=majority" || "mongodb://localhost/mapPoints");
 const pointsSeed = [
     {
         position: {
