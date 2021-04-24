@@ -64,7 +64,7 @@ class Home extends Component {
             <div>
                 <div className='row'>
                     <div className="col-3">
-                        {this.state.renderingInput && <InputForm marker={this.state.marker} getPoints={this.getPoints} />}
+                        {this.state.renderingInput && <InputForm marker={this.state.marker} />}
                         {/* <Search /> */}
                         <Card />
                     </div>
