@@ -20,9 +20,7 @@ const InputForm = (props) => {
         <form onSubmit={handleNewStop}>
             <label><strong>New Stop
                 <br />
-                {props.marker[0]}
-                <br />
-                {props.marker[1]}
+                {props.marker}
             </strong></label>
             <br />
             <input
