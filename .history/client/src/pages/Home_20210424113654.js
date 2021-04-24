@@ -23,7 +23,7 @@ class Home extends Component {
 
     addMarker = (e) => {
         console.log(e)
-        console.log(e.latlng.lat, e.latlng.lng, e.location, e.details)
+        console.log(e.latlng.lat, e.latlng.lng)
         this.setState({
             marker: [e.latlng.lat, e.latlng.lng],
             renderingInput: true
@@ -59,8 +59,8 @@ class Home extends Component {
             <div>
                 <div className='row'>
                     <div className="col-3">
-                        {this.state.renderingInput && <InputForm marker={this.state.marker} />}
-                        {/* <Search /> */}
+                        {this.state.renderingInput && <h1>Nick</h1>}
+                        <Search />
                         <Card />
                     </div>
                     <div className="col-9">

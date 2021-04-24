@@ -9,31 +9,24 @@ import L from 'leaflet';
 // import icon from './icon.jpg';
 import Icon from '../components/Icon'
 import Card from '../components/Card'
-import InputForm from '../components/InputForm'
 
 class Home extends Component {
     state = {
         markers: [],
         lat: 41.875440756396515,
         lng: -87.62412071228027,
-        marker: [],
-        renderingInput: false
+        marker: []
     }
 
 
     addMarker = (e) => {
         console.log(e)
-        console.log(e.latlng.lat, e.latlng.lng, e.location, e.details)
-        this.setState({
-            marker: [e.latlng.lat, e.latlng.lng],
-            renderingInput: true
-        })
         // const { marker } = this.state
         // marker.push([e.latlng.lat, e.latlng.lng])
         // this.setState({ marker })
-        // API.createPoint({ marker })
-        //     .then(response => response.push('/'))
-        //     .catch(err => console.log(err))
+        API.createPoint({ marker })
+            .then(response => response.push('/'))
+            .catch(err => console.log(err))
     }
 
     // removeMarker = (e) => {
@@ -46,7 +39,6 @@ class Home extends Component {
     //         .catch(err => console.log(err))
     // }
 
-    //handle submit to make api handle the api method
 
     componentDidMount() {
         API.getPoints()
@@ -59,8 +51,7 @@ class Home extends Component {
             <div>
                 <div className='row'>
                     <div className="col-3">
-                        {this.state.renderingInput && <InputForm marker={this.state.marker} />}
-                        {/* <Search /> */}
+                        <Search />
                         <Card />
                     </div>
                     <div className="col-9">

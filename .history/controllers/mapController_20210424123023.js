@@ -2,14 +2,12 @@ const db = require('../models')
 
 module.exports = {
     createPoint: function (req, res) {
-        console.log(req.body)
+        console.log(req)
         const newObject = {
             position: {
-                lat: req.body.marker[0],
-                lng: req.body.marker[1],
-            },
-            location: req.body.location,
-            details: req.body.details
+                lat: req.body.marker.latlng.lat,
+                lng: req.body.latlng.lng
+            }
         }
         db.Map.create(newObject)
             .then(point => {

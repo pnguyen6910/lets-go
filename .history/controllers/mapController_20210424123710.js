@@ -7,9 +7,9 @@ module.exports = {
             position: {
                 lat: req.body.marker[0],
                 lng: req.body.marker[1],
-            },
-            location: req.body.location,
-            details: req.body.details
+                location: req.body.location,
+                details: req.body.details
+            }
         }
         db.Map.create(newObject)
             .then(point => {
