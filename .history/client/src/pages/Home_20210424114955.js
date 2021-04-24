@@ -59,8 +59,8 @@ class Home extends Component {
             <div>
                 <div className='row'>
                     <div className="col-3">
-                        {this.state.renderingInput && <InputForm marker={this.state.marker} />}
-                        {/* <Search /> */}
+                        {this.state.renderingInput && <InputForm />}
+                        <Search />
                         <Card />
                     </div>
                     <div className="col-9">

@@ -9,7 +9,6 @@ import L from 'leaflet';
 // import icon from './icon.jpg';
 import Icon from '../components/Icon'
 import Card from '../components/Card'
-import InputForm from '../components/InputForm'
 
 class Home extends Component {
     state = {
@@ -23,9 +22,12 @@ class Home extends Component {
 
     addMarker = (e) => {
         console.log(e)
-        console.log(e.latlng.lat, e.latlng.lng, e.location, e.details)
+        console.log(e.latlng.lat, e.latlng.lng)
         this.setState({
-            marker: [e.latlng.lat, e.latlng.lng],
+            marker: [position: {
+                lat: e.latlng.lat,
+                lng: e.latlng.lng
+            }],
             renderingInput: true
         })
         // const { marker } = this.state
@@ -57,10 +59,10 @@ class Home extends Component {
         const position = [this.state.lat, this.state.lng];
         return (
             <div>
+                {this.state.renderingInput && <h1>Nick</h1>}
                 <div className='row'>
                     <div className="col-3">
-                        {this.state.renderingInput && <InputForm marker={this.state.marker} />}
-                        {/* <Search /> */}
+                        <Search />
                         <Card />
                     </div>
                     <div className="col-9">

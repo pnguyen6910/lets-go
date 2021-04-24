@@ -6,8 +6,8 @@ export default {
         return axios('/api/maps')
     },
     //adds a users point of interest to db
-    createPoint: function (markerData) {
-        return axios.post('/api/maps', markerData)
+    createPoint: function () {
+        return axios.post('/api/maps')
     },
     //deletes a point of interest from db
     deletePoint: function () {

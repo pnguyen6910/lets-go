@@ -8,45 +8,53 @@ import API from '../utils/API'
 import L from 'leaflet';
 // import icon from './icon.jpg';
 import Icon from '../components/Icon'
-import Card from '../components/Card'
-import InputForm from '../components/InputForm'
 
 class Home extends Component {
     state = {
         markers: [],
         lat: 41.875440756396515,
         lng: -87.62412071228027,
-        marker: [],
-        renderingInput: false
+        marker: []
     }
 
-
-    addMarker = (e) => {
-        console.log(e)
-        console.log(e.latlng.lat, e.latlng.lng, e.location, e.details)
-        this.setState({
-            marker: [e.latlng.lat, e.latlng.lng],
-            renderingInput: true
-        })
-        // const { marker } = this.state
-        // marker.push([e.latlng.lat, e.latlng.lng])
-        // this.setState({ marker })
-        // API.createPoint({ marker })
-        //     .then(response => response.push('/'))
-        //     .catch(err => console.log(err))
-    }
-
-    // removeMarker = (e) => {
+    // addMarker = (e) => {
     //     console.log(e)
     //     const { marker } = this.state
     //     marker.push([e.latlng.lat, e.latlng.lng])
     //     this.setState({ marker })
-    //     API.deletePoint({ marker })
-    //         .then(response => response.push)
+    //     API.createPoint({ marker })
+    //         .then(response => history.push('/'))
     //         .catch(err => console.log(err))
     // }
+    // for geolocation in map
+    // useEffect(() {
+    //     const { current = {} } = mapRef
+    //     const { leafletElement: map } = current
 
-    //handle submit to make api handle the api method
+    //     map.locate({
+    //         setView: true
+    //     })
+
+    //     map.on('locationfound', handleOnLocationFound)
+    // }, [])
+
+    // function handleOnLocationFound(e) {
+    //     const latlng = e.latlng
+    //     const radius = e.accuracy
+    //     const circle = L.circle(latlng, radius)
+    //     const { current = {} } = mapRef
+    //     const { leafletElement: map } = current
+    //     circle.addTo(map)
+    // }
+
+    // useEffect(() => {
+    //     const icon = new L.Icon({
+    //         iconUrl: icon,
+    //         iconSize: [26, 26],
+    //         popupAnchor: [0, -15]
+    //     })
+    // })
+
 
     componentDidMount() {
         API.getPoints()
@@ -56,12 +64,10 @@ class Home extends Component {
     render() {
         const position = [this.state.lat, this.state.lng];
         return (
-            <div>
+            <div className="container">
                 <div className='row'>
                     <div className="col-3">
-                        {this.state.renderingInput && <InputForm marker={this.state.marker} />}
-                        {/* <Search /> */}
-                        <Card />
+                        <Search />
                     </div>
                     <div className="col-9">
                         <Map
@@ -69,7 +75,7 @@ class Home extends Component {
                             center={position}
                             zoom={13}
                             scrollWheelZoom={true}
-                            onClick={this.addMarker}
+                        // onClick={this.addMarker}
                         >
 
                             <TileLayer
