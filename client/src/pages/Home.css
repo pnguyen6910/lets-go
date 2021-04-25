@@ -15,6 +15,10 @@
     margin-left: 5px;
 }
 
+.form {
+    margin: 5px;
+}
+
 @media screen and (max-width: 768px) {
 
     .col-3 {

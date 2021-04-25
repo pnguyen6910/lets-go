@@ -17,10 +17,16 @@ const InputForm = (props) => {
     }
 
     return (
-        <form onSubmit={handleNewStop}>
-            <label><strong>New Stop</strong></label>
+        <form className="form" onSubmit={handleNewStop}>
+            <label><strong>New Stop
+                <br />
+                {props.marker[0]}
+                <br />
+                {props.marker[1]}
+            </strong></label>
             <br />
             <input
+                className="form"
                 type="text"
                 name="location"
                 placeHolder="Location"
@@ -29,6 +35,7 @@ const InputForm = (props) => {
             />
             <br />
             <input
+                className="form"
                 type="text"
                 name="details"
                 placeholder="Details"
@@ -36,7 +43,7 @@ const InputForm = (props) => {
                 onChange={e => setDetails(e.target.value)}
             />
             <br />
-            <button type="button" onClick={handleNewStop}>Submit</button>
+            <button className="form"type="button" onClick={handleNewStop}>Submit</button>
         </form>
     )
 }
