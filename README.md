@@ -2,7 +2,15 @@
 
 ![screenshot](./client/public/img/map.JPG)
 
-AS A user, I want to explore the city on a bike and find points of interest!
+AS A 
+cyclist
+
+I WANT
+to find a bike path with notable destinations on the way
+
+SO THAT 
+I can have an awesome bike ride and find cool things on my path
+
 
 
 [Link to Website](https://glacial-waters-54685.herokuapp.com/)
