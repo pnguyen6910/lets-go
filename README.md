@@ -5,7 +5,7 @@
 AS A user, I want to explore the city on a bike and find points of interest!
 
 
-[Link to Video]()
+[Link to Website](https://glacial-waters-54685.herokuapp.com/)
 
 
 ## Table of Content
