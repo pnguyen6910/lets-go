@@ -27,7 +27,7 @@ const InputForm = (props) => {
             </strong></label>
             <br />
             <input
-                className="form-control"
+                className="form-control form"
                 type="text"
                 name="location"
                 placeHolder="Location"
@@ -36,7 +36,7 @@ const InputForm = (props) => {
             />
             <br />
             <input
-                className="form-control"
+                className="form-control form"
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default"
                 type="text"
@@ -46,7 +46,7 @@ const InputForm = (props) => {
                 onChange={e => setDetails(e.target.value)}
             />
             <br />
-            <button type="button" className="btn btn-primary" onClick={handleNewStop}>Submit</button>
+            <button type="button" className="btn btn-primary form" onClick={handleNewStop}>Submit</button>
         </form>
     )
 }
