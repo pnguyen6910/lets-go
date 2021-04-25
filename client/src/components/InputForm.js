@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import API from '../utils/API'
 
+
 const InputForm = (props) => {
     const [location, setLocation] = useState("")
     const [details, setDetails] = useState("")
@@ -26,6 +27,7 @@ const InputForm = (props) => {
             </strong></label>
             <br />
             <input
+                className="form-control"
                 type="text"
                 name="location"
                 placeHolder="Location"
@@ -34,6 +36,9 @@ const InputForm = (props) => {
             />
             <br />
             <input
+                className="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
                 type="text"
                 name="details"
                 placeholder="Details"
@@ -41,7 +46,7 @@ const InputForm = (props) => {
                 onChange={e => setDetails(e.target.value)}
             />
             <br />
-            <button type="button" onClick={handleNewStop}>Submit</button>
+            <button type="button" className="btn btn-primary" onClick={handleNewStop}>Submit</button>
         </form>
     )
 }
